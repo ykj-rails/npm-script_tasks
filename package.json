@@ -1,0 +1,19 @@
+{
+  "author": "Yuki Matsumoto",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "go": "run-s pug server watch:pug",
+    "watch:pug": "pug ./src/pug/ --hierarchy -o ./dist/ -P -w",
+    "watch": "run-p watch:*",
+    "watch:server": "browser-sync start -s dist -f dist"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
+    "pug": "^2.0.4",
+    "pug-cli": "github:pugjs/pug-cli#master",
+    "watch": "^1.0.2"
+  }
+}
